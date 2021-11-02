@@ -12,15 +12,14 @@ public class sampleTest {
         System.setProperty("webdriver.chrome.driver", "/Users/U405487/repo/Project1/drv/chromedriver.exe");
         driver = new ChromeDriver();
 
-
     }
+
 
 
     @Test
     public void testSample() {
         driver.get("http://localhost:8080/groups");
         driver.manage().window().maximize();
-
 
         System.out.println("Check url");
         driver.findElement(By.xpath("http://localhost:8080/groups")).click();

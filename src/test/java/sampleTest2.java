@@ -4,8 +4,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class sampleTest2 {
     public ChromeDriver driver;
 
@@ -20,7 +18,6 @@ public class sampleTest2 {
 
     @Test
     public void testSample() {
-
         driver.get("http://localhost:8080/groups");
         driver.manage().window().maximize();
 
