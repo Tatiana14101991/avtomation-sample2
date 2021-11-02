@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class sampleTest() {
+public class sampleTest2 {
     public ChromeDriver driver;
 
     @Before

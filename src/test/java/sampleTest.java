@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class sampleTest() {
+public class sampleTest {
     public ChromeDriver driver;
 
     @Before
@@ -38,12 +38,12 @@ public class sampleTest() {
 
 
     @After
-        public void afterTest() {
-            driver.quit();
-
-        }
-
+    public void afterTest() {
+        driver.quit();
 
     }
+
+
+}
 
 
