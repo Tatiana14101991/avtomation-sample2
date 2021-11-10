@@ -1,35 +1,56 @@
-//import org.junit.After;
-//import org.junit.Before;
-//import org.junit.Test;
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//
-//import static org.junit.Assert.assertEquals;
-//
-//public class createUsers {
-//    public ChromeDriver driver;
-//
-//
-//    @Before
-//    public void beforeTest() {
-//        System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
-//        driver = new ChromeDriver();
-//        driver.get("http://localhost:8080/settings");
-//        driver.manage().window().maximize();
-//    }
-//
-//
-//    @Test
-//    public void someTest() {
-//
-//
-//        System.out.println("Check url");
-//        assertEquals("http://localhost:8080/settings", driver.getCurrentUrl());
-//
-//        System.out.println("Check title");
-//        assertEquals("IndivAMR Cloud", driver.getTitle());
-//    }
-//
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import static org.junit.Assert.assertEquals;
+
+public class createUsers {
+    public ChromeDriver driver;
+
+
+    @Before
+    public void beforeTest() {
+        System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("http://localhost:8080/settings");
+        driver.manage().window().maximize();
+
+        System.out.println("someTest >> Check title");
+        assertEquals("IndivAMR Cloud", driver.getTitle());
+    }
+
+
+    @Test
+    public void testLogin() throws InterruptedException {
+
+
+        System.out.println("Enter Email");
+        driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
+        //Thread.sleep(5000);
+
+        System.out.println("Enter password");
+        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
+        //Thread.sleep(5000);
+
+        System.out.println("Click Enter");
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
+        Thread.sleep(5000);
+    }
+
+
+    @Test
+    public void someTest2() {
+
+
+        System.out.println("Check url");
+        assertEquals("http://localhost:8080/settings", driver.getCurrentUrl());
+
+        System.out.println("Check title");
+        assertEquals("IndivAMR Cloud", driver.getTitle());
+    }
+
+
 //    @Test
 //    public void createUsers() throws InterruptedException {
 //
@@ -55,13 +76,12 @@
 //
 //        System.out.println(By.xpath("Click on Сохранить"));
 //        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[3]/div/button[2]/span[1]")).click();
-//    }
-//
-//
-//        @After
-//        public void afterTest() {
-//            driver.quit();
-//        }
-//    }
-//
+
+
+        @After
+        public void afterTest() {
+            driver.quit();
+        }
+    }
+
 
