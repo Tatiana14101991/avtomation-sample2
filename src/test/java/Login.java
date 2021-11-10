@@ -23,10 +23,10 @@ public class Login {
     public void someTest() {
 
 
-        System.out.println("Check url");
+        System.out.println("someTest >> Check url");
         assertEquals("http://localhost:8080/login", driver.getCurrentUrl());
 
-        System.out.println("Check title");
+        System.out.println("someTest >> Check title");
         assertEquals("IndivAMR Cloud", driver.getTitle());
     }
 
@@ -36,11 +36,11 @@ public class Login {
 
         System.out.println("Enter Email");
         driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
 
         System.out.println("Enter password");
         driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
 
         System.out.println("Click Enter");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
@@ -52,25 +52,30 @@ public class Login {
     @Test
     public void testLogout() throws InterruptedException {
 
+        testLogin();
+
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
+        Thread.sleep(5000);
 
         System.out.println("Check title");
-        assertEquals("Обзор", driver.getTitle());
+        assertEquals("IndivAMR Cloud", driver.getTitle());
 
 
         System.out.println("Click Admin@Admin.com");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div/header[1]/div/div[3]/button/span[1]/text()"));
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div/header[1]/div/div[3]/button/span[1]"))
+                .click();
         Thread.sleep(5000);
 
         System.out.println("Click Выйти");
-        driver.findElement(By.xpath("//*[@id=\"user-menu\"]/div[3]/ul/li[2]/text()"));
+        driver.findElement(By.xpath("//*[@id=\"user-menu\"]/div[3]/ul/li[2]"));
         Thread.sleep(5000);
     }
 
 
     @After
     public void afterTest() {
+        System.out.println("afterTest");
         driver.quit();
 
     }
