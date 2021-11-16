@@ -39,7 +39,7 @@ public class Login {
 
         System.out.println("Enter password");
         driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        //Thread.sleep(5000);
+        Thread.sleep(5000);
 
         System.out.println("Click Enter");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
@@ -81,4 +81,3 @@ public class Login {
 
 
 }
-
