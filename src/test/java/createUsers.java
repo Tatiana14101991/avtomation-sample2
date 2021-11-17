@@ -28,63 +28,64 @@ public class createUsers {
 
         System.out.println("Enter Email");
         driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        //Thread.sleep(5000);
+        Thread.sleep(2000);
 
         System.out.println("Enter password");
         driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        //Thread.sleep(5000);
+        Thread.sleep(2000);
 
         System.out.println("Click Enter");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
 
         System.out.println("Check title");
         assertEquals("IndivAMR Cloud", driver.getTitle());
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         System.out.println("Check menu");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div/header[2]/div/button")).click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
-        System.out.println("Click settings");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/aside/div/div[2]/div/div/div/div[3]/div/a/div/span")).click();
-        Thread.sleep(5000);
-
-
-    }
+        System.out.println("Click Настройки");
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/aside/div/div[2]/div/div/div/div[3]/div/a/div/span")).click();
+        Thread.sleep(3000);
 
 
-    @Test
-    public void createUsers() throws InterruptedException {
-
-
-
-
-        System.out.println("Click Управление пользователями");//*[@id="root"]/div/section/div/aside/div/div[2]/div/div/div/div[3]/div/a/span
+        System.out.println("Click Управление пользователями");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/div[2]/div/div[1]/div/div/button[2]/span[1]")).click();
-        Thread.sleep(10000);
+        Thread.sleep(3000);
+
 
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/div[2]/div/div[2]/div[1]/div[1]/div[4]/div/div/span/button[1]")).click();
-        Thread.sleep(10000);
+        Thread.sleep(2000);
 
         System.out.println("Enter Email");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[1]/label/text()")).sendKeys("Admin5@Admin.com");
+        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[1]/div/input")).sendKeys("Admin5@Admin.com");
+        Thread.sleep(2000);
 
         System.out.println("Enter Роли");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[2]/label/text()")).sendKeys("Менеджер");
+        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[2]/div/input")).sendKeys("Менеджер");
+        Thread.sleep(2000);
 
-        System.out.println("Enter Палоль");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[3]/label/text()")).sendKeys("Admin@Admin.com");
+        System.out.println("Enter Пароль");
+        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[3]/div/input")).sendKeys("Admin@Admin.com");
+        Thread.sleep(2000);
 
         System.out.println("Enter Подтверждение пароля");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[4]/label/text()")).sendKeys("Admin@Admin.com");
+        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[4]/div/input")).sendKeys("Admin@Admin.com");
+        Thread.sleep(2000);
 
-        System.out.println(By.xpath("Click on Сохранить"));
+        System.out.println("Click Сохранить");
         driver.findElement(By.xpath("/html/body/div[5]/form/div/div[3]/div/button[2]/span[1]")).click();
+        Thread.sleep(2000);
+
+        System.out.println("Click Удалить");
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[3]/div/button[2]")).click();
+        Thread.sleep(2000);
 
     }
 
