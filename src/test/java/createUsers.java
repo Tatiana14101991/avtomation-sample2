@@ -67,8 +67,8 @@ public class createUsers {
         driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[1]/div/input")).sendKeys("Admin5@Admin.com");
         Thread.sleep(2000);
 
-        System.out.println("Enter Роли");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[2]/div/input")).sendKeys("Менеджер");
+        System.out.println("Enter Менеджер");
+        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[2]/div/div")).sendKeys("Менеджер");
         Thread.sleep(2000);
 
         System.out.println("Enter Пароль");
@@ -85,6 +85,10 @@ public class createUsers {
 
         System.out.println("Click Удалить");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[3]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        System.out.println("Click Сохранить");
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/div[2]/div/div[2]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[2]/div/button[1]/span[1]/span")).click();
         Thread.sleep(2000);
 
     }
