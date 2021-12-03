@@ -57,8 +57,8 @@ public class Pulsar_MBus_Converter_MBus {
         Thread.sleep(1000);
 
         System.out.println("Click Тип устройства");
-        driver.findElement(By.xpath("//label[text()='Тип устройства']")).click();
-        driver.findElement(By.xpath("//div[7]/form/div/div[2]")).click();
+        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Pulsar MBus Converter')]")).click();
 
 
         System.out.println("Click Далее");

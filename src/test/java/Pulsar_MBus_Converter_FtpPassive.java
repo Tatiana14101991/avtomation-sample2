@@ -58,7 +58,7 @@ public class Pulsar_MBus_Converter_FtpPassive {
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Pulsar MBus Converter']")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Pulsar MBus Converter')]")).click();
 
 
         System.out.println("Click Далее");
@@ -81,7 +81,7 @@ public class Pulsar_MBus_Converter_FtpPassive {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test17");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test173");//переписать нормально
         Thread.sleep(1000);
 
 
@@ -97,7 +97,7 @@ public class Pulsar_MBus_Converter_FtpPassive {
         Thread.sleep(3000);
 
         System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test17']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test173']")).click();
         Thread.sleep(1000);
 
         System.out.println("Check Удалить");
