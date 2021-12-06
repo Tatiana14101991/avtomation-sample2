@@ -81,9 +81,8 @@ public class Pulsar_MBus_Converter_HttpEcl4Test {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test212");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test213");//переписать нормально
         Thread.sleep(1000);
-
 
 
         System.out.println("Click Сохранить");
@@ -97,15 +96,19 @@ public class Pulsar_MBus_Converter_HttpEcl4Test {
         Thread.sleep(3000);
 
         System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test212']/..//span[text()='edit']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//td[@value='test213']/..//span[text()='edit']")).click();
+
         Thread.sleep(1000);
 
         System.out.println("Check Удалить");
         driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
         Thread.sleep(1000);
 
+        System.out.println("Check Сохранить все изменения");
+        driver.findElement(By.xpath("//*[text()='check']")).click();
+        Thread.sleep(1000);
     }
-
 
     @After
     public void afterTest() {
