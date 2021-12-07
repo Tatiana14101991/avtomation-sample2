@@ -110,6 +110,11 @@ public class Pulsar_MBus_Converter_FtpPassive {
         driver.findElement(By.xpath("//*[text()='check']")).click();
         Thread.sleep(1000);
 
+        System.out.println("Check Сохранить");
+        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+        Thread.sleep(1000);
+
+
     }
 
 
