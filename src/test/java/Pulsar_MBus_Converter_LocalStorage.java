@@ -81,7 +81,7 @@ public class Pulsar_MBus_Converter_LocalStorage {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test20");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test23");//переписать нормально
         Thread.sleep(1000);
 
 
@@ -97,11 +97,19 @@ public class Pulsar_MBus_Converter_LocalStorage {
         Thread.sleep(3000);
 
         System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test20']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test23']/..//span[text()='edit']")).click();
         Thread.sleep(1000);
 
         System.out.println("Check Удалить");
         driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Сохранить все изменения");
+        driver.findElement(By.xpath("//*[text()='check']")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Сохранить");
+        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
         Thread.sleep(1000);
 
     }
