@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class INDIV_X_TOTAL_HttpEcl4 {
+public class Danfoss_INDIV_X_TOTAL_HttpEcl4 {
     public ChromeDriver driver;
 
     @Before

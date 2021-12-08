@@ -81,7 +81,7 @@ public class Pulsar_MBus_Converter_FtpPassive {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test174");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test274");//переписать нормально
         Thread.sleep(1000);
 
 
@@ -98,7 +98,7 @@ public class Pulsar_MBus_Converter_FtpPassive {
 
         System.out.println("Check Изменить");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//td[@value='test174']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test274']/..//span[text()='edit']")).click();
 
         Thread.sleep(1000);
 

@@ -109,10 +109,6 @@ public class Danfoss_SonoCollect110_LocalStorage {
         Thread.sleep(1000);
 
 
-
-
-
-
     }
 
 

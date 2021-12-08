@@ -58,9 +58,8 @@ public class Danfoss_SonoCollect_111_FtpPassive {
 
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'SonoCollect-111')]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Pulsar MBus Converter')]")).click();
-
 
         System.out.println("Click Далее");
         driver.findElement(By.xpath("//span[contains(text(), 'Далее')]")).click();
@@ -75,22 +74,22 @@ public class Danfoss_SonoCollect_111_FtpPassive {
         System.out.println(tr.getTagName());
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test174");//переписать нормально
+        tr.findElement(By.xpath("//tr[2]/td[2]/div/div/input")).sendKeys("test175");
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
-        tr.findElement(By.xpath("td[2]/div/div")).click();
+        tr.findElement(By.xpath("//tr[2]/td[3]/div/div/div")).click();
         driver.findElement(By.xpath("*//li[contains(text(),'FtpPassive')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
         System.out.println("Enter Login");
-        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test53");
+        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test175");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test53");//переписать нормально
+        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test175");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -105,7 +104,7 @@ public class Danfoss_SonoCollect_111_FtpPassive {
 
         System.out.println("Check Изменить");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//td[@value='test174']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test175']/..//span[text()='edit']")).click();
 
         Thread.sleep(1000);
 

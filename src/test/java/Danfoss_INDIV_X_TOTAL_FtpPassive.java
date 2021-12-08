@@ -20,7 +20,7 @@ public class Danfoss_INDIV_X_TOTAL_FtpPassive {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Danfoss_INDIV_X_TOTAL_FtpPassive() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -56,8 +56,9 @@ public class Danfoss_INDIV_X_TOTAL_FtpPassive {
 
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();//переписать нормально
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss INDIV-X-TOTAL')]")).click();
         Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss INDIV-X-TOTAL')]")).click();
+
 
         System.out.println("Click Далее");
         driver.findElement(By.xpath(".//span[contains(text(), 'Далее')]")).click();
