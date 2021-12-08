@@ -56,9 +56,9 @@ public class ADFWeb_HttpEcl4 {
         Thread.sleep(1000);
 
         System.out.println("Click Тип устройства");
-        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div']")).click();
-        driver.findElement(By.xpath("//div[7]/form/div/div[2]")).click();
-
+        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'ADFWeb')]")).click();
 
         System.out.println("Click Далее");
         driver.findElement(By.xpath("//*//span[contains(text(), 'Далее')]")).click();
