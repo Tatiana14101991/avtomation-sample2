@@ -83,8 +83,6 @@ public class ADFWeb_HttpEcl4 {
         tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test15");//переписать нормально
         Thread.sleep(1000);
 
-
-
         System.out.println("Click Сохранить");
         WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
         System.out.println(save.getTagName());
@@ -95,13 +93,13 @@ public class ADFWeb_HttpEcl4 {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test15']/..//span[text()='edit']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
+//        System.out.println("Check Изменить");
+//        driver.findElement(By.xpath("//td[@value='test15']/..//span[text()='edit']")).click();
+//        Thread.sleep(1000);
+//
+//        System.out.println("Check Удалить");
+//        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
+//        Thread.sleep(1000);
 
     }
 
