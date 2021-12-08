@@ -56,8 +56,9 @@ public class ADFWeb_FtpPassive {
         Thread.sleep(1000);
 
         System.out.println("Click Тип устройства");
-        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div']")).click();
-        driver.findElement(By.xpath("//div[text()='ADFWeb']")).click();
+        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/.")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[text()='ADFWeb']")).click();
 
 
         System.out.println("Click Далее");
@@ -80,7 +81,7 @@ public class ADFWeb_FtpPassive {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test51");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test52");//переписать нормально
         Thread.sleep(1000);
 
 
@@ -96,7 +97,7 @@ public class ADFWeb_FtpPassive {
         Thread.sleep(3000);
 
         System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test51']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test52']/..//span[text()='edit']")).click();
         Thread.sleep(1000);
 
         System.out.println("Check Удалить");
