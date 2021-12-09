@@ -78,7 +78,7 @@ public class Danfoss_SonoCollect_111_Mbus {
 
         System.out.println("Click Типы загрузки");
         tr.findElement(By.xpath("//tr[2]/td[3]/div/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'Mbus')]")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'MBus')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
