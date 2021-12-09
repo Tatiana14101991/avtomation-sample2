@@ -60,7 +60,6 @@ public class ADFWeb_FtpPassive {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li[contains(text(),'ADFWeb')]")).click();
 
-
         System.out.println("Click Далее");
         driver.findElement(By.xpath(".//span[contains(text(), 'Далее')]")).click();
         Thread.sleep(3000);
@@ -68,7 +67,6 @@ public class ADFWeb_FtpPassive {
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//button[@title='Добавить']")).click();
         Thread.sleep(1000);
-
 
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
@@ -84,10 +82,8 @@ public class ADFWeb_FtpPassive {
         tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test52");//переписать нормально
         Thread.sleep(1000);
 
-
-
         System.out.println("Click Сохранить");
-        WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
+        WebElement save = tr.findElement(By.xpath("//button[3]//*[@class='MuiButton-label']']"));
         System.out.println(save.getTagName());
         save.click();
         Thread.sleep(3000);
