@@ -69,26 +69,26 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
         Thread.sleep(1000);
 
 
-        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));
+        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("//tr[2]/td[3]/div/div/div")).sendKeys("test276");
+        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test271");
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
-        tr.findElement(By.xpath("//td[3]/div/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'HttpEcl14')]")).click();
+        tr.findElement(By.xpath("td[3]/div/div")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'HttpEcl4')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
         System.out.println("Enter Login");
-        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test276");
+        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test271");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test276");//переписать нормально
+        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test271");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

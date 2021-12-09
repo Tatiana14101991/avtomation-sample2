@@ -81,7 +81,7 @@ public class Pulsar_MBus_Converter_ModBus {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test29");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test29");
         Thread.sleep(1000);
 
 
