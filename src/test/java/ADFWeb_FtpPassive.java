@@ -83,7 +83,7 @@ public class ADFWeb_FtpPassive {
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
-        WebElement save = tr.findElement(By.xpath("//button[3]//*[@class='MuiButton-label']']"));
+        WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
         System.out.println(save.getTagName());
         save.click();
         Thread.sleep(3000);
