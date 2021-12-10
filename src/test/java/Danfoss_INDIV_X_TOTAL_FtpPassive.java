@@ -67,18 +67,18 @@ public class Danfoss_INDIV_X_TOTAL_FtpPassive {
         driver.findElement(By.xpath("//button[@title='Добавить']")).click();
         Thread.sleep(1000);
 
-        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
+        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));
         System.out.println(tr.getTagName());
         System.out.println("Enter Login");
         tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test65");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test65");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test65");
         Thread.sleep(1000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test65");//переписать нормально
+        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test65");
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");

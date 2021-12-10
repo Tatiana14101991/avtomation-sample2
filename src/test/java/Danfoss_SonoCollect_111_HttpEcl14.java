@@ -73,7 +73,7 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
         System.out.println(tr.getTagName());
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test272");
+        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test27");
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
@@ -84,11 +84,11 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
         Thread.sleep(3000);
 
         System.out.println("Enter Login");
-        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test272");
+        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test27");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test272");//переписать нормально
+        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test27");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -103,7 +103,7 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
 
         System.out.println("Check Изменить");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//td[@value='test272']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test27']/..//span[text()='edit']")).click();
 
         Thread.sleep(1000);
 
