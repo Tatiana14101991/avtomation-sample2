@@ -18,7 +18,7 @@ public class Создание_квартиры {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Создание_квартиры() throws InterruptedException {
 
         System.out.println("Enter Email");
         driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");

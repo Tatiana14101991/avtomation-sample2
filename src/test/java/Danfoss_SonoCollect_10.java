@@ -8,8 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
-
+public class Danfoss_SonoCollect_10 {
     public ChromeDriver driver;
 
     @Before
@@ -22,7 +21,7 @@ public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
 
 
     @Test
-    public void Danfoss_SonoSafe_10() throws InterruptedException {
+    public void Danfoss_SonoCollect_10() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -68,7 +67,7 @@ public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSafe-10')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSelect-10')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -80,7 +79,7 @@ public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678992");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
         Thread.sleep(1000);
 
         System.out.println("Enter Количество каналов");
@@ -113,3 +112,4 @@ public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
         driver.quit();
     }
 }
+

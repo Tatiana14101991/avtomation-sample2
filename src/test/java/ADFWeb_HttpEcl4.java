@@ -20,7 +20,7 @@ public class ADFWeb_HttpEcl4 {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void ADFWeb_HttpEcl4() throws InterruptedException {
 
 
         System.out.println("Enter Email");
