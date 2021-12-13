@@ -84,7 +84,7 @@ public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
         Thread.sleep(1000);
 
         System.out.println("Enter Количество каналов");
-        driver.findElement(By.xpath("//label[contains(text(),'Chanels')]")).sendKeys("12345678992");
+        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("12345678992");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
