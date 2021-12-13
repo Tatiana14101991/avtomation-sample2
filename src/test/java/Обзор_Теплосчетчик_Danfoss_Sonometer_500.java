@@ -79,13 +79,26 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_500 {
             Thread.sleep(1000);
 
             System.out.println("Enter Серийный номер");
-            driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123456789");
+            driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678992");
             Thread.sleep(1000);
 
             System.out.println("Click Сохранить");
-            driver.findElement(By.xpath("//button[@title='Сохранить']")).click();
+            driver.findElement(By.xpath("//button[1][@title='Сохранить']")).click();
+            Thread.sleep(2000);
+
+            System.out.println("Click Сохранить");
+            driver.findElement(By.xpath("//div[3]/div/button[2]/span[1]")).click();
+            Thread.sleep(2000);
+
+            System.out.println("Click Изменить");
+            driver.findElement(By.xpath("//button[2][@title='Изменить']")).click();
+            Thread.sleep(2000);
+
+            System.out.println("Click Удалить");
+            driver.findElement(By.xpath("//button[@title='Удалить']")).click();
             Thread.sleep(1000);
 
+            Thread.sleep(1000);
 
         }
 
