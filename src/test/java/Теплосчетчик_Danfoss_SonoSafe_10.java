@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
+public class Теплосчетчик_Danfoss_SonoSafe_10 {
 
     public ChromeDriver driver;
 
@@ -80,7 +80,7 @@ public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678992");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
         Thread.sleep(1000);
 
         System.out.println("Enter Количество каналов");
