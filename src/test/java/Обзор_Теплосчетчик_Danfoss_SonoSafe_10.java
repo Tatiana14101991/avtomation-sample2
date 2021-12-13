@@ -8,7 +8,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Обзор_Теплосчетчик_Danfoss_Sonometer_1000 {
+public class Обзор_Теплосчетчик_Danfoss_SonoSafe_10 {
+
     public ChromeDriver driver;
 
     @Before
@@ -67,7 +68,7 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1000 {
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss Sonometer-1000')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSafe-10')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -79,7 +80,11 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1000 {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678992");
+        Thread.sleep(1000);
+
+        System.out.println("Enter Количество каналов");
+        driver.findElement(By.xpath("//label[contains(text(),'Chanels')]")).sendKeys("12345678992");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -98,7 +103,7 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1000 {
         driver.findElement(By.xpath("//button[@title='Удалить']")).click();
         Thread.sleep(1000);
 
-        Thread.sleep(1000);
+
 
     }
 

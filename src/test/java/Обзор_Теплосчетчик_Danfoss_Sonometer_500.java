@@ -98,7 +98,6 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_500 {
             driver.findElement(By.xpath("//button[@title='Удалить']")).click();
             Thread.sleep(1000);
 
-            Thread.sleep(1000);
 
         }
 
