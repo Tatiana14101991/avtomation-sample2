@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_Default_Heater_Meter {
+public class Счетчик_холодной_воды_Danfoss_Default_Heater_Meter {
     public ChromeDriver driver;
 
     @Before
@@ -79,7 +79,7 @@ public class Danfoss_Default_Heater_Meter {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("1234567891");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("1234567892");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

@@ -8,8 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Счетчик_холодной_воды_Danfoss_C_WMT {
-
+public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
     public ChromeDriver driver;
 
     @Before
@@ -22,7 +21,7 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
 
 
     @Test
-    public void Счетчик_холодной_воды_Danfoss_C_WMT() throws InterruptedException {
+    public void Danfoss_SonoSafe_10() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -68,7 +67,7 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss C-WMT')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Universal C-WM')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -80,7 +79,23 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123453");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678996");
+        Thread.sleep(1000);
+
+        System.out.println("Enter Тип покааний");
+        driver.findElement(By.xpath("//tr[2]/td[9]/div/div/div['Тип показаний']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'Meter status byte')]")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Enter Адаптер");
+        driver.findElement(By.xpath("//tr[2]/td[9]/div/div/div['Тип показаний']")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'Meter status byte')]")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Enter Номер канала");
+        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("1");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -99,11 +114,10 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
         driver.findElement(By.xpath("//button[@title='Удалить']")).click();
         Thread.sleep(1000);
 
-
     }
 
 
-    @After
+        @After
     public void afterTest() {
         driver.quit();
     }
