@@ -1,13 +1,14 @@
+package Danfoss_INDIV_X_TOTAL;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect110_Mbus {
+public class Danfoss_INDIV_X_TOTAL_ModBus {
 
     public ChromeDriver driver;
 
@@ -17,11 +18,11 @@ public class Danfoss_SonoCollect110_Mbus {
         driver = new ChromeDriver();
         driver.get("http://localhost:8080/login");
         driver.manage().window().maximize();
-        }
+    }
 
 
-        @Test
-        public void SonoCollect_110FtpPassive() throws InterruptedException {
+    @Test
+    public void SonoCollect_110FtpPassive() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -56,8 +57,8 @@ public class Danfoss_SonoCollect110_Mbus {
         Thread.sleep(1000);
 
         System.out.println("Click Тип устройства");
-        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoCollect-110')]")).click();
+        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();//переписать нормально
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss INDIV-X-TOTAL')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -72,20 +73,20 @@ public class Danfoss_SonoCollect110_Mbus {
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
         System.out.println("Enter Login");
-        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test22");
+        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test811");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test22");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test811");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test22");//переписать нормально
+        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test811");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
         tr.findElement(By.xpath("td[5]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'MBus')]")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'ModBus')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
@@ -100,35 +101,27 @@ public class Danfoss_SonoCollect110_Mbus {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test22']/..//span[text()='edit']")).click();
-        Thread.sleep(1000);
+//        System.out.println("Check Изменить");
+//        driver.findElement(By.xpath("//td[@value='test811']/..//span[text()='edit']")).click();
+//        Thread.sleep(1000);
+//
+//        System.out.println("Check Удалить");
+//        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
+//        Thread.sleep(1000);
+//
+//        System.out.println("Check Сохранить все изменения");
+//        driver.findElement(By.xpath("//*[text()='check']")).click();
+//        Thread.sleep(1000);
+//
+//        System.out.println("Check Сохранить");
+//        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+//        Thread.sleep(1000);
 
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath("//*[text()='check']")).click();
-        Thread.sleep(1000);
-
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
-
-
-
-
-
-
-        }
-
-
-        @After
-        public void afterTest() {
-            driver.quit();
-        }
     }
 
 
+    @After
+    public void afterTest() {
+        driver.quit();
+    }
+}

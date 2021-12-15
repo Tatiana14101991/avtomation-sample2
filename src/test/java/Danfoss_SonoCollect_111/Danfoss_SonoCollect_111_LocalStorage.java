@@ -1,14 +1,16 @@
+package Danfoss_SonoCollect_111;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect_111_HttpEcl14 {
+public class Danfoss_SonoCollect_111_LocalStorage {
     public ChromeDriver driver;
-    private WebElement tr;
 
     @Before
     public void beforeTest() {
@@ -20,7 +22,7 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
 
 
     @Test
-    public void Danfoss_SonoCollect_111_HttpEcl14() throws InterruptedException {
+    public void Danfoss_SonoCollect_111_LocalStorage() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -33,8 +35,8 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
 
         System.out.println("Click Enter");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
+        Thread.sleep(1000);
 
-        Thread.sleep(2000);
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
 
@@ -50,45 +52,43 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
         driver.findElement(By.xpath(".//span[contains(text(), 'Настройки')]")).click();
         Thread.sleep(1000);
 
-        Thread.sleep(2000);
         System.out.println("Click Добавить");
-        driver.findElement(By.xpath("//*[@title='Добавить']")).click();
-        Thread.sleep(3000);
+        driver.findElement(By.xpath("//span[text()=\"add_box\"]")).click();
+        Thread.sleep(1000);
 
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'SonoCollect-111')]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoCollect-111')]")).click();
 
         System.out.println("Click Далее");
-        driver.findElement(By.xpath("//span[contains(text(), 'Далее')]")).click();
+        driver.findElement(By.xpath(".//span[contains(text(), 'Далее')]")).click();
         Thread.sleep(3000);
 
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//button[@title='Добавить']")).click();
         Thread.sleep(1000);
 
-
-        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
+        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));
         System.out.println(tr.getTagName());
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test27");
+        tr.findElement(By.xpath("//tr[2]/td[2]/div/div/input")).sendKeys("test17");
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
         tr.findElement(By.xpath("td[3]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'HttpEcl4')]")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'LocalStorage')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
         System.out.println("Enter Login");
-        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test27");
+        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test17");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test27");//переписать нормально
+        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test17");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -103,7 +103,7 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
 
         System.out.println("Check Изменить");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//td[@value='test27']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test17']/..//span[text()='edit']")).click();
 
         Thread.sleep(1000);
 
@@ -114,6 +114,7 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
         System.out.println("Check Сохранить все изменения");
         driver.findElement(By.xpath("//*[text()='check']")).click();
         Thread.sleep(1000);
+
 
         System.out.println("Check Сохранить");
         driver.findElement(By.xpath("//*[text()='Сохранить']")).click();

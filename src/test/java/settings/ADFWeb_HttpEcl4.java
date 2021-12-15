@@ -1,3 +1,5 @@
+package settings;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,8 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect110_FtpPassive {
-
+public class ADFWeb_HttpEcl4 {
     public ChromeDriver driver;
 
     @Before
@@ -21,7 +22,7 @@ public class Danfoss_SonoCollect110_FtpPassive {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void ADFWeb_HttpEcl4() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -34,8 +35,8 @@ public class Danfoss_SonoCollect110_FtpPassive {
 
         System.out.println("Click Enter");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-        Thread.sleep(1000);
 
+        Thread.sleep(2000);
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
 
@@ -51,17 +52,18 @@ public class Danfoss_SonoCollect110_FtpPassive {
         driver.findElement(By.xpath(".//span[contains(text(), 'Настройки')]")).click();
         Thread.sleep(1000);
 
+        Thread.sleep(2000);
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//*[@title='Добавить']")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Тип устройства");
-        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();//переписать нормально
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoCollect-110')]")).click();
+        driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'ADFWeb')]")).click();
 
         System.out.println("Click Далее");
-        driver.findElement(By.xpath(".//span[contains(text(), 'Далее')]")).click();
+        driver.findElement(By.xpath("//*//span[contains(text(), 'Далее')]")).click();
         Thread.sleep(3000);
 
         System.out.println("Click Добавить");
@@ -71,24 +73,17 @@ public class Danfoss_SonoCollect110_FtpPassive {
 
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
-        System.out.println("Enter Login");
-        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test135");
-        Thread.sleep(1000);
-
-        System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test135");//переписать нормально
-        Thread.sleep(1000);
-
-        System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test135");//переписать нормально
-        Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
-        tr.findElement(By.xpath("td[5]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'FtpPassive')]")).click();
+        tr.findElement(By.xpath("td[2]/div/div")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'HttpEcl4')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
+
+        System.out.println("Enter IPv4");
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test15");//переписать нормально
+        Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
         WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
@@ -101,14 +96,12 @@ public class Danfoss_SonoCollect110_FtpPassive {
         Thread.sleep(3000);
 
 //        System.out.println("Check Изменить");
-//        driver.findElement(By.xpath("//td[@value='test134']/..//span[text()='edit']")).click();
+//        driver.findElement(By.xpath("//td[@value='test15']/..//span[text()='edit']")).click();
 //        Thread.sleep(1000);
 //
 //        System.out.println("Check Удалить");
 //        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
 //        Thread.sleep(1000);
-
-
 
     }
 
@@ -118,4 +111,3 @@ public class Danfoss_SonoCollect110_FtpPassive {
         driver.quit();
     }
 }
-

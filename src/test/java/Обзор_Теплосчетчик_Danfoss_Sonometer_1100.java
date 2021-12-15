@@ -4,10 +4,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class ADFWeb_FtpPassive {
+public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
     public ChromeDriver driver;
 
     @Before
@@ -20,7 +21,7 @@ public class ADFWeb_FtpPassive {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Danfoss_SonoCollect_111_LocalStorage() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -33,8 +34,8 @@ public class ADFWeb_FtpPassive {
 
         System.out.println("Click Enter");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
+        Thread.sleep(1000);
 
-        Thread.sleep(2000);
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
 
@@ -42,15 +43,17 @@ public class ADFWeb_FtpPassive {
         assertEquals("IndivAMR Cloud", driver.getTitle());
         Thread.sleep(1000);
 
-        System.out.println("Check menu");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div/header[2]/div/button")).click();
+        System.out.println("Click Бориса Пастернака,25");
+        Actions actions = new Actions(driver);
+        WebElement elementLocator = driver.findElement(By.xpath("//*[contains(text(), 'Бориса Пастернака,25')]"));
+        actions.doubleClick(elementLocator).perform();
         Thread.sleep(1000);
 
-        System.out.println("Click Настройки");
-        driver.findElement(By.xpath(".//span[contains(text(), 'Настройки')]")).click();
+        System.out.println("35");
+        elementLocator = driver.findElement(By.xpath(".//tr[3]//td[1][@value='35']"));
+        actions.doubleClick(elementLocator).perform();
         Thread.sleep(1000);
 
-        Thread.sleep(2000);
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//*[@title='Добавить']")).click();
         Thread.sleep(1000);
@@ -58,47 +61,44 @@ public class ADFWeb_FtpPassive {
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'ADFWeb')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Теплосчетчик')]")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Click Модель");
+        driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss Sonometer-1100')]")).click();
+        Thread.sleep(1000);
 
         System.out.println("Click Далее");
         driver.findElement(By.xpath(".//span[contains(text(), 'Далее')]")).click();
         Thread.sleep(3000);
 
         System.out.println("Click Добавить");
-        driver.findElement(By.xpath("//button[@title='Добавить']")).click();
+        driver.findElement(By.xpath("//*[@title='Добавить']")).click();
         Thread.sleep(1000);
 
-        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
-        System.out.println(tr.getTagName());
-
-        System.out.println("Click Типы загрузки");
-        tr.findElement(By.xpath("td[2]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'FtpPassive')]")).click();
-
-        driver.findElement(By.xpath("//body")).click();
-        Thread.sleep(3000);
-
-        System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test52");//переписать нормально
+        System.out.println("Enter Серийный номер");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
-        WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
-        System.out.println(save.getTagName());
-        save.click();
-        Thread.sleep(3000);
+        driver.findElement(By.xpath("//button[1][@title='Сохранить']")).click();
+        Thread.sleep(2000);
 
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
-        Thread.sleep(3000);
+        System.out.println("Click Сохранить");
+        driver.findElement(By.xpath("//div[3]/div/button[2]/span[1]")).click();
+        Thread.sleep(2000);
 
-//        System.out.println("Check Изменить");
-//        driver.findElement(By.xpath("//td[@value='test52']/..//span[text()='edit']")).click();
-//        Thread.sleep(1000);
-//
-//        System.out.println("Check Удалить");
-//        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-//        Thread.sleep(1000);
+        System.out.println("Click Изменить");
+        driver.findElement(By.xpath("//button[2][@title='Изменить']")).click();
+        Thread.sleep(2000);
+
+        System.out.println("Click Удалить");
+        driver.findElement(By.xpath("//button[@title='Удалить']")).click();
+        Thread.sleep(1000);
+
+        Thread.sleep(1000);
 
     }
 

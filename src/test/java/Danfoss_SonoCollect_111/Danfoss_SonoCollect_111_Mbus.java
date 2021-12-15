@@ -1,13 +1,14 @@
+package Danfoss_SonoCollect_111;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import static org.junit.Assert.assertEquals;
 
-public class ADFWeb_LocalStorage {
+public class Danfoss_SonoCollect_111_Mbus {
     public ChromeDriver driver;
 
     @Before
@@ -20,7 +21,7 @@ public class ADFWeb_LocalStorage {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Danfoss_SonoCollect_111_Mbus() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -53,16 +54,16 @@ public class ADFWeb_LocalStorage {
         Thread.sleep(2000);
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//*[@title='Добавить']")).click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'ADFWeb')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoCollect-111')]")).click();
 
 
         System.out.println("Click Далее");
-        driver.findElement(By.xpath("//*//span[contains(text(), 'Далее')]")).click();
+        driver.findElement(By.xpath("//span[contains(text(), 'Далее')]")).click();
         Thread.sleep(3000);
 
         System.out.println("Click Добавить");
@@ -70,18 +71,26 @@ public class ADFWeb_LocalStorage {
         Thread.sleep(1000);
 
 
-        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
+        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));
         System.out.println(tr.getTagName());
 
+        System.out.println("Enter IPv4");
+        tr.findElement(By.xpath("//tr[2]/td[2]/div/div/input")).sendKeys("test176");
+        Thread.sleep(1000);
+
         System.out.println("Click Типы загрузки");
-        tr.findElement(By.xpath("td[2]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'LocalStorage')]")).click();
+        tr.findElement(By.xpath("//tr[2]/td[3]/div/div/div")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'MBus')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
-        System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test181");//переписать нормально
+        System.out.println("Enter Login");
+        tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test176");
+        Thread.sleep(1000);
+
+        System.out.println("Enter Пароль");
+        tr.findElement(By.xpath("//tr[2]/td[5]/div/div/input")).sendKeys("test176");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -94,13 +103,24 @@ public class ADFWeb_LocalStorage {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-//        System.out.println("Check Изменить");
-//        driver.findElement(By.xpath("//td[@value='test17']/..//span[text()='edit']")).click();
-//        Thread.sleep(1000);
-//
-//        System.out.println("Check Удалить");
-//        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-//        Thread.sleep(1000);
+        System.out.println("Check Изменить");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//td[@value='test176']/..//span[text()='edit']")).click();
+
+        Thread.sleep(1000);
+
+        System.out.println("Check Удалить");
+        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Сохранить все изменения");
+        driver.findElement(By.xpath("//*[text()='check']")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Сохранить");
+        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+        Thread.sleep(1000);
+
 
     }
 
@@ -110,3 +130,4 @@ public class ADFWeb_LocalStorage {
         driver.quit();
     }
 }
+

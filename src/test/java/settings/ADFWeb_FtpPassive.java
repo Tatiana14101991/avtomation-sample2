@@ -1,3 +1,5 @@
+package settings;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class ADFWeb_HttpEcl4 {
+public class ADFWeb_FtpPassive {
     public ChromeDriver driver;
 
     @Before
@@ -20,7 +22,7 @@ public class ADFWeb_HttpEcl4 {
 
 
     @Test
-    public void ADFWeb_HttpEcl4() throws InterruptedException {
+    public void SonoCollect_110FtpPassive() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -61,26 +63,25 @@ public class ADFWeb_HttpEcl4 {
         driver.findElement(By.xpath("//li[contains(text(),'ADFWeb')]")).click();
 
         System.out.println("Click Далее");
-        driver.findElement(By.xpath("//*//span[contains(text(), 'Далее')]")).click();
+        driver.findElement(By.xpath(".//span[contains(text(), 'Далее')]")).click();
         Thread.sleep(3000);
 
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//button[@title='Добавить']")).click();
         Thread.sleep(1000);
 
-
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
 
         System.out.println("Click Типы загрузки");
         tr.findElement(By.xpath("td[2]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'HttpEcl4')]")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'FtpPassive')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test15");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test52");//переписать нормально
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -94,7 +95,7 @@ public class ADFWeb_HttpEcl4 {
         Thread.sleep(3000);
 
 //        System.out.println("Check Изменить");
-//        driver.findElement(By.xpath("//td[@value='test15']/..//span[text()='edit']")).click();
+//        driver.findElement(By.xpath("//td[@value='test52']/..//span[text()='edit']")).click();
 //        Thread.sleep(1000);
 //
 //        System.out.println("Check Удалить");

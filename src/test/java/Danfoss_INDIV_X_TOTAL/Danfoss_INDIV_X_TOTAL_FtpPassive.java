@@ -1,13 +1,14 @@
+package Danfoss_INDIV_X_TOTAL;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect110_ModBus {
+public class Danfoss_INDIV_X_TOTAL_FtpPassive {
 
     public ChromeDriver driver;
 
@@ -21,7 +22,7 @@ public class Danfoss_SonoCollect110_ModBus {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Danfoss_INDIV_X_TOTAL_FtpPassive() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -57,7 +58,7 @@ public class Danfoss_SonoCollect110_ModBus {
 
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();//переписать нормально
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoCollect-110')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss INDIV-X-TOTAL')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -68,24 +69,23 @@ public class Danfoss_SonoCollect110_ModBus {
         driver.findElement(By.xpath("//button[@title='Добавить']")).click();
         Thread.sleep(1000);
 
-
-        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
+        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));
         System.out.println(tr.getTagName());
         System.out.println("Enter Login");
-        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test3");
+        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test65");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test3");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test65");
         Thread.sleep(1000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test3");//переписать нормально
+        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test65");
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
         tr.findElement(By.xpath("td[5]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'ModBus')]")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'FtpPassive')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
@@ -100,24 +100,21 @@ public class Danfoss_SonoCollect110_ModBus {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test3']/..//span[text()='edit']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath("//*[text()='check']")).click();
-        Thread.sleep(1000);
-
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
-
-
+//        System.out.println("Check Изменить");
+//        driver.findElement(By.xpath("//td[@value='test65']/..//span[text()='edit']")).click();
+//        Thread.sleep(1000);
+//
+//        System.out.println("Check Удалить");
+//        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
+//        Thread.sleep(1000);
+//
+//        System.out.println("Check Сохранить все изменения");
+//        driver.findElement(By.xpath("//*[text()='check']")).click();
+//        Thread.sleep(1000);
+//
+//        System.out.println("Check Сохранить");
+//        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+//        Thread.sleep(1000);
 
 
 
@@ -131,6 +128,3 @@ public class Danfoss_SonoCollect110_ModBus {
         driver.quit();
     }
 }
-
-
-
