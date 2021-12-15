@@ -1,3 +1,5 @@
+package Теплосчетчик;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect_10 {
+public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
     public ChromeDriver driver;
 
     @Before
@@ -21,7 +23,7 @@ public class Danfoss_SonoCollect_10 {
 
 
     @Test
-    public void Danfoss_SonoCollect_10() throws InterruptedException {
+    public void Danfoss_SonoCollect_111_LocalStorage() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -67,7 +69,7 @@ public class Danfoss_SonoCollect_10 {
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSelect-10')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss Sonometer-1100')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -80,10 +82,6 @@ public class Danfoss_SonoCollect_10 {
 
         System.out.println("Enter Серийный номер");
         driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
-        Thread.sleep(1000);
-
-        System.out.println("Enter Количество каналов");
-        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("1");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -102,7 +100,7 @@ public class Danfoss_SonoCollect_10 {
         driver.findElement(By.xpath("//button[@title='Удалить']")).click();
         Thread.sleep(1000);
 
-
+        Thread.sleep(1000);
 
     }
 
@@ -112,4 +110,3 @@ public class Danfoss_SonoCollect_10 {
         driver.quit();
     }
 }
-
