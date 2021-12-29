@@ -63,7 +63,6 @@ public class ADFWeb_ModBus {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//li[contains(text(),'ADFWeb')]")).click();
 
-
         System.out.println("Click Далее");
         driver.findElement(By.xpath("//*//span[contains(text(), 'Далее')]")).click();
         Thread.sleep(3000);
@@ -71,7 +70,6 @@ public class ADFWeb_ModBus {
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//button[@title='Добавить']")).click();
         Thread.sleep(1000);
-
 
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
@@ -84,9 +82,8 @@ public class ADFWeb_ModBus {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test161");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test151");//переписать нормально
         Thread.sleep(1000);
-
 
 
         System.out.println("Click Сохранить");
@@ -99,13 +96,13 @@ public class ADFWeb_ModBus {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-//        System.out.println("Check Изменить");
-//        driver.findElement(By.xpath("//td[@value='test16']/..//span[text()='edit']")).click();
-//        Thread.sleep(1000);
-//
-//        System.out.println("Check Удалить");
-//        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-//        Thread.sleep(1000);
+        System.out.println("Check Изменить");
+        driver.findElement(By.xpath("//td[@value='test151']/..//span[text()='edit']")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Удалить");
+        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
+        Thread.sleep(1000);
 
     }
 
