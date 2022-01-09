@@ -81,23 +81,7 @@ public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678996");
-        Thread.sleep(1000);
-
-        System.out.println("Enter Тип покааний");
-        driver.findElement(By.xpath("//tr[2]/td[9]/div/div/div['Тип показаний']")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Meter status byte')]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Enter Адаптер");
-        driver.findElement(By.xpath("//tr[2]/td[9]/div/div/div['Тип показаний']")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Meter status byte')]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Enter Номер канала");
-        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("1");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -114,6 +98,10 @@ public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
 
         System.out.println("Click Удалить");
         driver.findElement(By.xpath("//button[@title='Удалить']")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Сохранить все изменения");
+        driver.findElement(By.xpath("//*[text()='check']")).click();
         Thread.sleep(1000);
 
     }

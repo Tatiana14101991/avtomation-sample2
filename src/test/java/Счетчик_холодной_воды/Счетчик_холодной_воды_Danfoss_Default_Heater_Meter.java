@@ -63,13 +63,13 @@ public class Счетчик_холодной_воды_Danfoss_Default_Heater_Met
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Теплосчетчик')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Счетчик холодной воды')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Default Heater Meter')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Default Cold Water Meter')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -100,6 +100,13 @@ public class Счетчик_холодной_воды_Danfoss_Default_Heater_Met
         driver.findElement(By.xpath("//button[@title='Удалить']")).click();
         Thread.sleep(1000);
 
+        System.out.println("Check Сохранить все изменения");
+        driver.findElement(By.xpath("//*[text()='check']")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Сохранить");
+        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+        Thread.sleep(1000);
 
     }
 
