@@ -103,6 +103,14 @@ public class ADFWeb_HttpEcl4 {
         driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
         Thread.sleep(1000);
 
+        System.out.println("Check Сохранить");
+        driver.findElement(By.xpath("//*[@title='Сохранить все изменения']")).click();
+        Thread.sleep(3000);
+
+        System.out.println("Check Сохранить все изменения");
+        driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
+        Thread.sleep(3000);
+
     }
 
 
