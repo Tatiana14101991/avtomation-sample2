@@ -117,6 +117,13 @@ import static org.junit.Assert.assertEquals;
             driver.findElement(By.xpath("//button[@title='Удалить']")).click();
             Thread.sleep(1000);
 
+            System.out.println("Check Сохранить все изменения");
+            driver.findElement(By.xpath("//*[text()='check']")).click();
+            Thread.sleep(1000);
+
+            System.out.println("Check Сохранить");
+            driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+            Thread.sleep(1000);
 
         }
 

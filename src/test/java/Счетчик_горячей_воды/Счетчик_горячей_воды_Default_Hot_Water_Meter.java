@@ -101,6 +101,13 @@ public class Счетчик_горячей_воды_Default_Hot_Water_Meter {
         driver.findElement(By.xpath("//button[@title='Удалить']")).click();
         Thread.sleep(1000);
 
+        System.out.println("Check Сохранить все изменения");
+        driver.findElement(By.xpath("//*[text()='check']")).click();
+        Thread.sleep(1000);
+
+        System.out.println("Check Сохранить");
+        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+        Thread.sleep(1000);
 
     }
 
