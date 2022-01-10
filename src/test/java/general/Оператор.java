@@ -30,7 +30,9 @@ public class Оператор {
     public void testLogin() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin4@Admin.com");
+        Auth.login(driver,"Admin4@Admin.com","Admin@Admin.com");
+
+
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
 
@@ -50,48 +52,9 @@ public class Оператор {
         driver.quit();
     }
 
-    public static class Login {
-        public ChromeDriver driver;
-
-
-        @Before
-        public void beforeTest() {
-            System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
-            driver = new ChromeDriver();
-            driver.get("http://localhost:8080/login");
-            driver.manage().window().maximize();
-        }
-
-
-        @Test
-        public void someTest() {
-
-
-            System.out.println("someTest >> Check url");
-            assertEquals("http://localhost:8080/login", driver.getCurrentUrl());
-
-            System.out.println("someTest >> Check title");
-            assertEquals("IndivAMR Cloud", driver.getTitle());
-        }
-
-        @Test
-        public void testLogin() throws InterruptedException {
-            Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
-
-
 
         }
 
 
 
-        @After
-        public void afterTest() {
-            System.out.println("afterTest");
-            driver.quit();
-
-        }
-
-
-    }
-}
 
