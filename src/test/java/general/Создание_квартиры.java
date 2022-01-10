@@ -1,3 +1,6 @@
+package general;
+
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,16 +23,7 @@ public class Создание_квартиры {
     @Test
     public void Создание_квартиры() throws InterruptedException {
 
-        System.out.println("Enter Email");
-        driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Enter password");
-        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Click Enter");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
+        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");

@@ -71,7 +71,7 @@ public class Danfoss_INDIV_X_TOTAL_FtpPassive {
 
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));
         System.out.println(tr.getTagName());
-        System.out.println("Enter Login");
+        System.out.println("Enter general.Оператор.Login");
         tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test65");
         Thread.sleep(1000);
 

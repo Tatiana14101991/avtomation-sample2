@@ -85,7 +85,7 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
-        System.out.println("Enter Login");
+        System.out.println("Enter general.Оператор.Login");
         tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test27");
         Thread.sleep(1000);
 

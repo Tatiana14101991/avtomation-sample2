@@ -1,5 +1,6 @@
 package general;
 
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,18 +30,7 @@ public class Оператор {
     public void testLogin() throws InterruptedException {
 
 
-        System.out.println("Enter Email");
-        driver.findElement(By.id("Email")).sendKeys("Admin4@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Enter password");
-        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Click Enter");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-        Thread.sleep(3000);
-
+        Auth.login(driver,"Admin@Admin.com","Admin4@Admin.com");
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
 
@@ -58,6 +48,50 @@ public class Оператор {
     @After
     public void afterTest() {
         driver.quit();
+    }
+
+    public static class Login {
+        public ChromeDriver driver;
+
+
+        @Before
+        public void beforeTest() {
+            System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
+            driver = new ChromeDriver();
+            driver.get("http://localhost:8080/login");
+            driver.manage().window().maximize();
+        }
+
+
+        @Test
+        public void someTest() {
+
+
+            System.out.println("someTest >> Check url");
+            assertEquals("http://localhost:8080/login", driver.getCurrentUrl());
+
+            System.out.println("someTest >> Check title");
+            assertEquals("IndivAMR Cloud", driver.getTitle());
+        }
+
+        @Test
+        public void testLogin() throws InterruptedException {
+            Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+
+
+
+        }
+
+
+
+        @After
+        public void afterTest() {
+            System.out.println("afterTest");
+            driver.quit();
+
+        }
+
+
     }
 }
 

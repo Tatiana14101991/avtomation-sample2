@@ -73,7 +73,7 @@ public class Danfoss_SonoCollect110_Mbus {
 
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
-        System.out.println("Enter Login");
+        System.out.println("Enter general.Оператор.Login");
         tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test22");
         Thread.sleep(1000);
 

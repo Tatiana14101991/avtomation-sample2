@@ -69,8 +69,8 @@ public class createUsers {
         driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[1]/div/input")).sendKeys("Admin5@Admin.com");
         Thread.sleep(2000);
 
-        System.out.println("Enter Менеджер");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[2]/div/div")).sendKeys("Менеджер");
+        System.out.println("Enter general.Менеджер");
+        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[2]/div/div")).sendKeys("general.Менеджер");
         Thread.sleep(2000);
 
         System.out.println("Enter Пароль");
