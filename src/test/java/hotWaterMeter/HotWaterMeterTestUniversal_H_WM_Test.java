@@ -1,4 +1,4 @@
-package Счетчик_горячей_воды;
+package hotWaterMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-    public class Счетчик_горячей_воды_Universal_H_WM {
+    public class HotWaterMeterTestUniversal_H_WM_Test {
 
         public ChromeDriver driver;
 

@@ -83,7 +83,7 @@ public class Danfoss_SonoCollect_111_LocalStorage {
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
-        System.out.println("Enter general.Оператор.Login");
+        System.out.println("Enter general.OperatorTest.Login");
         tr.findElement(By.xpath("//tr[2]/td[4]/div/div/input")).sendKeys("test17");
         Thread.sleep(1000);
 

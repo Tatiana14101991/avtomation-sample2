@@ -1,4 +1,4 @@
-package Теплосчетчик;
+package HeatMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Обзор_Теплосчетчик_Danfoss_Sonometer_500 {
+public class HeatMeter_Danfoss_Sonometer_500_Test {
         public ChromeDriver driver;
 
         @Before

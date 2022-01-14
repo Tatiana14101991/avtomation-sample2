@@ -1,4 +1,4 @@
-package Счетчик_горячей_воды;
+package ColdWaterMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,8 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Счетчик_горячей_воды_Default_Hot_Water_Meter {
-
+public class ColdWaterMeter_Danfoss_Default_Heater_Meter_Test {
     public ChromeDriver driver;
 
     @Before
@@ -24,7 +23,7 @@ public class Счетчик_горячей_воды_Default_Hot_Water_Meter {
 
 
     @Test
-    public void Default_Hot_Water_Meter() throws InterruptedException {
+    public void Danfoss_Default_Heater_Meter() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -64,13 +63,13 @@ public class Счетчик_горячей_воды_Default_Hot_Water_Meter {
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Счетчик горячей воды')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Счетчик холодной воды')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Default Hot Water Meter')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Default Cold Water Meter')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -82,7 +81,7 @@ public class Счетчик_горячей_воды_Default_Hot_Water_Meter {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123457");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("1234567892");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -117,4 +116,3 @@ public class Счетчик_горячей_воды_Default_Hot_Water_Meter {
         driver.quit();
     }
 }
-

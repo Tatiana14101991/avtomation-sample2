@@ -1,5 +1,6 @@
-package Теплосчетчик;
+package hotWaterMeter;
 
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,8 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Теплосчетчик_Danfoss_SonoSafe_10 {
-
+public class HotWaterMeterDanfoss_H_WMT_Test {
     public ChromeDriver driver;
 
     @Before
@@ -24,20 +24,10 @@ public class Теплосчетчик_Danfoss_SonoSafe_10 {
 
 
     @Test
-    public void Danfoss_SonoSafe_10() throws InterruptedException {
+    public void Danfoss_H_WMT() throws InterruptedException {
 
 
-        System.out.println("Enter Email");
-        driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Enter password");
-        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Click Enter");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-        Thread.sleep(1000);
+        Auth.login(this.driver, "Admin@Admin.com", "Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -64,13 +54,13 @@ public class Теплосчетчик_Danfoss_SonoSafe_10 {
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Теплосчетчик')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Счетчик горячей воды')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSafe-10')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss H-WMT')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -82,11 +72,7 @@ public class Теплосчетчик_Danfoss_SonoSafe_10 {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
-        Thread.sleep(1000);
-
-        System.out.println("Enter Количество каналов");
-        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("1");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123456");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -113,7 +99,6 @@ public class Теплосчетчик_Danfoss_SonoSafe_10 {
         driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
         Thread.sleep(1000);
 
-
     }
 
 
@@ -122,3 +107,4 @@ public class Теплосчетчик_Danfoss_SonoSafe_10 {
         driver.quit();
     }
 }
+

@@ -1,4 +1,4 @@
-package Счетчик_холодной_воды;
+package HeatMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Счетчик_холодной_воды_Danfoss_Default_Heater_Meter {
+public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
     public ChromeDriver driver;
 
     @Before
@@ -23,7 +23,7 @@ public class Счетчик_холодной_воды_Danfoss_Default_Heater_Met
 
 
     @Test
-    public void Danfoss_Default_Heater_Meter() throws InterruptedException {
+    public void Danfoss_SonoCollect_111_LocalStorage() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -63,13 +63,13 @@ public class Счетчик_холодной_воды_Danfoss_Default_Heater_Met
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Счетчик холодной воды')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Теплосчетчик')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Default Cold Water Meter')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss Sonometer-1100')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -81,7 +81,7 @@ public class Счетчик_холодной_воды_Danfoss_Default_Heater_Met
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("1234567892");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -107,6 +107,7 @@ public class Счетчик_холодной_воды_Danfoss_Default_Heater_Met
         System.out.println("Check Сохранить");
         driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
         Thread.sleep(1000);
+
 
     }
 

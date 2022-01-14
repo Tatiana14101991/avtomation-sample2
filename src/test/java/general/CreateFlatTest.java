@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
-public class Создание_квартиры {
+public class CreateFlatTest {
     public ChromeDriver driver;
 
     @Before

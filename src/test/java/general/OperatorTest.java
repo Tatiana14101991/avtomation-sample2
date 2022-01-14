@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 
 
-public class Менеджер {
+public class OperatorTest {
     public ChromeDriver driver;
 
 
@@ -29,8 +29,9 @@ public class Менеджер {
     @Test
     public void testLogin() throws InterruptedException {
 
-        
-        Auth.login(driver,"Admin3@Admin.com","Admin@Admin.com");
+
+        Auth.login(driver,"Admin4@Admin.com","Admin@Admin.com");
+
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -50,5 +51,10 @@ public class Менеджер {
     public void afterTest() {
         driver.quit();
     }
-}
+
+
+        }
+
+
+
 

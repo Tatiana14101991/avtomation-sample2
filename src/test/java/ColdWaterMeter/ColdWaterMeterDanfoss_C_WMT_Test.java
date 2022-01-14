@@ -1,4 +1,4 @@
-package Теплосчетчик;
+package ColdWaterMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoSelect_10 {
+public class ColdWaterMeterDanfoss_C_WMT_Test {
+
     public ChromeDriver driver;
 
     @Before
@@ -23,7 +24,7 @@ public class Danfoss_SonoSelect_10 {
 
 
     @Test
-    public void Danfoss_SonoSelect_10() throws InterruptedException {
+    public void Счетчик_холодной_воды_Danfoss_C_WMT() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -63,13 +64,13 @@ public class Danfoss_SonoSelect_10 {
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Теплосчетчик')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Счетчик холодной воды')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSelect-10')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss C-WMT')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -81,11 +82,7 @@ public class Danfoss_SonoSelect_10 {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
-        Thread.sleep(1000);
-
-        System.out.println("Enter Количество каналов");
-        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("1");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123453");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -111,8 +108,6 @@ public class Danfoss_SonoSelect_10 {
         System.out.println("Check Сохранить");
         driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
         Thread.sleep(1000);
-
-
 
     }
 

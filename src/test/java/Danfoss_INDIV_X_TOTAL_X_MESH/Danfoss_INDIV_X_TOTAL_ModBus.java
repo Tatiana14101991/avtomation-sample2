@@ -63,7 +63,7 @@ public class Danfoss_INDIV_X_TOTAL_ModBus {
 
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
-        System.out.println("Enter general.Оператор.Login");
+        System.out.println("Enter general.OperatorTest.Login");
         tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test811");
         Thread.sleep(1000);
 

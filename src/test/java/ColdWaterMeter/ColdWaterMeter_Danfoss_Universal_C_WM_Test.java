@@ -1,4 +1,4 @@
-package Счетчик_холодной_воды;
+package ColdWaterMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,8 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Счетчик_холодной_воды_Danfoss_C_WMT {
-
+public class ColdWaterMeter_Danfoss_Universal_C_WM_Test {
     public ChromeDriver driver;
 
     @Before
@@ -24,7 +23,7 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
 
 
     @Test
-    public void Счетчик_холодной_воды_Danfoss_C_WMT() throws InterruptedException {
+    public void Danfoss_SonoSafe_10() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -70,7 +69,7 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss C-WMT')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Universal C-WM')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -82,7 +81,7 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123453");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -105,14 +104,10 @@ public class Счетчик_холодной_воды_Danfoss_C_WMT {
         driver.findElement(By.xpath("//*[text()='check']")).click();
         Thread.sleep(1000);
 
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
-
     }
 
 
-    @After
+        @After
     public void afterTest() {
         driver.quit();
     }

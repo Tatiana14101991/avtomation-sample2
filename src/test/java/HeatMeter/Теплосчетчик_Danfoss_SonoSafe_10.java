@@ -1,4 +1,4 @@
-package Теплосчетчик;
+package HeatMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
+public class Теплосчетчик_Danfoss_SonoSafe_10 {
+
     public ChromeDriver driver;
 
     @Before
@@ -23,7 +24,7 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
 
 
     @Test
-    public void Danfoss_SonoCollect_111_LocalStorage() throws InterruptedException {
+    public void Danfoss_SonoSafe_10() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -69,7 +70,7 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss Sonometer-1100')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSafe-10')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -82,6 +83,10 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
 
         System.out.println("Enter Серийный номер");
         driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
+        Thread.sleep(1000);
+
+        System.out.println("Enter Количество каналов");
+        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("1");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

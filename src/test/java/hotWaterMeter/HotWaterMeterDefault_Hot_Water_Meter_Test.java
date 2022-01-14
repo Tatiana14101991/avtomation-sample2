@@ -1,4 +1,4 @@
-package Счетчик_горячей_воды;
+package hotWaterMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Счетчик_горячей_воды_Danfoss_H_WMT {
+public class HotWaterMeterDefault_Hot_Water_Meter_Test {
+
     public ChromeDriver driver;
 
     @Before
@@ -23,7 +24,7 @@ public class Счетчик_горячей_воды_Danfoss_H_WMT {
 
 
     @Test
-    public void Danfoss_H_WMT() throws InterruptedException {
+    public void Default_Hot_Water_Meter() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -69,7 +70,7 @@ public class Счетчик_горячей_воды_Danfoss_H_WMT {
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Danfoss H-WMT')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Default Hot Water Meter')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -81,7 +82,7 @@ public class Счетчик_горячей_воды_Danfoss_H_WMT {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123456");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123457");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

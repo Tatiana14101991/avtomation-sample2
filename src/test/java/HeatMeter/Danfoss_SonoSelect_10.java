@@ -1,4 +1,4 @@
-package Счетчик_холодной_воды;
+package HeatMeter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
+public class Danfoss_SonoSelect_10 {
     public ChromeDriver driver;
 
     @Before
@@ -23,7 +23,7 @@ public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
 
 
     @Test
-    public void Danfoss_SonoSafe_10() throws InterruptedException {
+    public void Danfoss_SonoSelect_10() throws InterruptedException {
 
 
         System.out.println("Enter Email");
@@ -63,13 +63,13 @@ public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Счетчик холодной воды')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Теплосчетчик')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Модель");
         driver.findElement(By.xpath("//label[contains(text(),'Модель')]/following::div")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//li[contains(text(),'Universal C-WM')]")).click();
+        driver.findElement(By.xpath("//li[contains(text(),'Danfoss SonoSelect-10')]")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Далее");
@@ -81,7 +81,11 @@ public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
+        Thread.sleep(1000);
+
+        System.out.println("Enter Количество каналов");
+        driver.findElement(By.xpath("//tr[2]/td[12]/div/div/input")).sendKeys("1");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -104,10 +108,16 @@ public class Счетчик_холодной_воды_Danfoss_Universal_C_WM {
         driver.findElement(By.xpath("//*[text()='check']")).click();
         Thread.sleep(1000);
 
+        System.out.println("Check Сохранить");
+        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
+        Thread.sleep(1000);
+
+
+
     }
 
 
-        @After
+    @After
     public void afterTest() {
         driver.quit();
     }

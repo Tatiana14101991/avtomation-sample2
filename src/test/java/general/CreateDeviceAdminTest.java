@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
 
-public class Создание_прибора_Админ {
+public class CreateDeviceAdminTest {
     public ChromeDriver driver;
 
 
@@ -74,7 +74,7 @@ public class Создание_прибора_Админ {
 
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
-        System.out.println("Enter general.Оператор.Login");
+        System.out.println("Enter general.OperatorTest.Login");
         tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("111211111");
         Thread.sleep(1000);
 
