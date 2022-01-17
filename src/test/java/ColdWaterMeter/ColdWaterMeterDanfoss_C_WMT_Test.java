@@ -1,5 +1,6 @@
 package ColdWaterMeter;
 
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,17 +28,7 @@ public class ColdWaterMeterDanfoss_C_WMT_Test {
     public void Счетчик_холодной_воды_Danfoss_C_WMT() throws InterruptedException {
 
 
-        System.out.println("Enter Email");
-        driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Enter password");
-        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Click Enter");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-        Thread.sleep(1000);
+        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -53,13 +44,13 @@ public class ColdWaterMeterDanfoss_C_WMT_Test {
         Thread.sleep(1000);
 
         System.out.println("35");
-        elementLocator = driver.findElement(By.xpath(".//tr[3]//td[1][@value='35']"));
+        elementLocator = driver.findElement(By.xpath("//*[@value='35']"));
         actions.doubleClick(elementLocator).perform();
         Thread.sleep(1000);
 
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//*[@title='Добавить']")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         System.out.println("Click Тип устройства");
         driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
@@ -82,7 +73,7 @@ public class ColdWaterMeterDanfoss_C_WMT_Test {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123453");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("21453");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
@@ -99,7 +90,7 @@ public class ColdWaterMeterDanfoss_C_WMT_Test {
 
         System.out.println("Click Удалить");
         driver.findElement(By.xpath("//button[@title='Удалить']")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         System.out.println("Check Сохранить все изменения");
         driver.findElement(By.xpath("//*[text()='check']")).click();

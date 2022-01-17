@@ -1,5 +1,6 @@
 package hotWaterMeter;
 
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,17 +28,7 @@ import static org.junit.Assert.assertEquals;
         public void Universal_H_WM() throws InterruptedException {
 
 
-            System.out.println("Enter Email");
-            driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-            Thread.sleep(1000);
-
-            System.out.println("Enter password");
-            driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-            Thread.sleep(1000);
-
-            System.out.println("Click Enter");
-            driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-            Thread.sleep(1000);
+            Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
 
             System.out.println("Check url");
             assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -85,16 +76,16 @@ import static org.junit.Assert.assertEquals;
             driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345");
             Thread.sleep(1000);
 
-            System.out.println("Enter Тип покааний");
+            System.out.println("Enter Тип показаний");
             driver.findElement(By.xpath("//tr[2]/td[9]/div/div/div['Тип показаний']")).click();
             Thread.sleep(1000);
             driver.findElement(By.xpath("//li[contains(text(),'Meter status byte')]")).click();
             Thread.sleep(1000);
 
             System.out.println("Enter Адаптер");
-            driver.findElement(By.xpath("//tr[2]/td[9]/div/div/div['Тип показаний']")).click();
+            driver.findElement(By.xpath("//tr[2]/td[10]/div]")).click();
             Thread.sleep(1000);
-            driver.findElement(By.xpath("//li[contains(text(),'Meter status byte')]")).click();
+            driver.findElement(By.xpath("//*[contains(text(),'878')])]")).click();
             Thread.sleep(1000);
 
             System.out.println("Enter Номер канала");

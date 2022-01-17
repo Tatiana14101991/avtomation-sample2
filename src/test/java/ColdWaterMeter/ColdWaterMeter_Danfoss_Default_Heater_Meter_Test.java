@@ -1,5 +1,6 @@
 package ColdWaterMeter;
 
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,17 +27,7 @@ public class ColdWaterMeter_Danfoss_Default_Heater_Meter_Test {
     public void Danfoss_Default_Heater_Meter() throws InterruptedException {
 
 
-        System.out.println("Enter Email");
-        driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Enter password");
-        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Click Enter");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-        Thread.sleep(1000);
+        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -52,9 +43,9 @@ public class ColdWaterMeter_Danfoss_Default_Heater_Meter_Test {
         Thread.sleep(1000);
 
         System.out.println("35");
-        elementLocator = driver.findElement(By.xpath(".//tr[3]//td[1][@value='35']"));
+        elementLocator = driver.findElement(By.xpath("//*[@value='35']"));
         actions.doubleClick(elementLocator).perform();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         System.out.println("Click Добавить");
         driver.findElement(By.xpath("//*[@title='Добавить']")).click();
@@ -81,7 +72,7 @@ public class ColdWaterMeter_Danfoss_Default_Heater_Meter_Test {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("1234567892");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12356892");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

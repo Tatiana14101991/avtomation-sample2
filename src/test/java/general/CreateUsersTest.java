@@ -55,24 +55,24 @@ public class CreateUsersTest {
         driver.findElement(By.xpath("//*[@title='Добавить']")).click();
         Thread.sleep(2000);
 
-        System.out.println("Enter Email");
-        driver.findElement(By.xpath("//div[7]//*[text()='Email']")).sendKeys("Admin5@Admin.com");
+        System.out.println("Click Email");
+        driver.findElement(By.xpath("/html/body/div[7]/form/div/div[2]/div/div[1]/div/input")).sendKeys("Admin3@Admin.com");
         Thread.sleep(2000);
 
-        System.out.println("Enter general.ManagerTest");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[2]/div/div")).sendKeys("general.ManagerTest");
+        System.out.println("Enter Роли");
+        driver.findElement(By.xpath("/html/body/div[7]/form/div/div[2]/div/div[2]/div/div")).sendKeys("Менеджер");
         Thread.sleep(2000);
 
         System.out.println("Enter Пароль");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[3]/div/input")).sendKeys("Admin@Admin.com");
+        driver.findElement(By.xpath("/html/body/div[7]/form/div/div[2]/div/div[3]/div/input")).sendKeys("Admin@Admin.com");
         Thread.sleep(2000);
 
         System.out.println("Enter Подтверждение пароля");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[2]/div/div[4]/div/input")).sendKeys("Admin@Admin.com");
+        driver.findElement(By.xpath("/html/body/div[7]/form/div/div[2]/div/div[4]/div/input")).sendKeys("Admin@Admin.com");
         Thread.sleep(2000);
 
         System.out.println("Click Сохранить");
-        driver.findElement(By.xpath("/html/body/div[5]/form/div/div[3]/div/button[2]/span[1]")).click();
+        driver.findElement(By.xpath("//div[3]/div/button[2]/span[1]")).click();
         Thread.sleep(2000);
 
         System.out.println("Click Удалить");
