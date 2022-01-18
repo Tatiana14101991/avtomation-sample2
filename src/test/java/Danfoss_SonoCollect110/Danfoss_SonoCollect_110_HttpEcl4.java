@@ -65,15 +65,15 @@ public class Danfoss_SonoCollect_110_HttpEcl4 {
         System.out.println(tr.getTagName());
 
         System.out.println("Enter general.OperatorTest.Login");
-        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test531");
+        tr.findElement(By.xpath("td[2]/div/div/input")).sendKeys("test53");
         Thread.sleep(1000);
 
         System.out.println("Enter Пароль");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test531");
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test53");
         Thread.sleep(1000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test531");
+        tr.findElement(By.xpath("td[4]/div/div/input")).sendKeys("test53");
         Thread.sleep(1000);
 
         System.out.println("Click Типы загрузки");
@@ -95,7 +95,7 @@ public class Danfoss_SonoCollect_110_HttpEcl4 {
 
         System.out.println("Check Изменить");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//td[@value='test531']/..//span[text()='edit']")).click();
+        driver.findElement(By.xpath("//td[@value='test53']/..//span[text()='edit']")).click();
 
         Thread.sleep(1000);
 
