@@ -25,7 +25,7 @@ import static org.junit.Assert.assertEquals;
 
 
         @Test
-        public void Universal_H_WM() throws InterruptedException {
+        public void HotWaterMeterTestUniversal_H_WM() throws InterruptedException {
 
 
             Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
@@ -50,7 +50,7 @@ import static org.junit.Assert.assertEquals;
 
             System.out.println("Click Добавить");
             driver.findElement(By.xpath("//*[@title='Добавить']")).click();
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             System.out.println("Click Тип устройства");
             driver.findElement(By.xpath("//label[contains(text(),'Тип устройства')]/following::div")).click();
@@ -69,7 +69,7 @@ import static org.junit.Assert.assertEquals;
             Thread.sleep(3000);
 
             System.out.println("Click Добавить");
-            driver.findElement(By.xpath("//*[@title='Добавить']")).click();
+            driver.findElement(By.xpath("//div[9]//button[4]")).click();
             Thread.sleep(1000);
 
             System.out.println("Enter Серийный номер");
@@ -83,8 +83,8 @@ import static org.junit.Assert.assertEquals;
             Thread.sleep(1000);
 
             System.out.println("Enter Адаптер");
-            driver.findElement(By.xpath("//tr[2]/td[10]/div]")).click();
-            Thread.sleep(1000);
+            driver.findElement(By.xpath("/html/body/div[9]/form/div/div[2]/div[2]/div[3]/div/div/div/table/tbody/tr[2]/td[10]/div/div/svg")).click();
+            Thread.sleep(3000);
             driver.findElement(By.xpath("//*[contains(text(),'878')])]")).click();
             Thread.sleep(1000);
 
