@@ -68,13 +68,13 @@ public class ADFWeb_MBus {
 
         System.out.println("Click Типы загрузки");
         tr.findElement(By.xpath("td[2]/div/div")).click();
-        driver.findElement(By.xpath("*//li[contains(text(),'HttpEcl4')]")).click();
+        driver.findElement(By.xpath("*//li[contains(text(),'MBus')]")).click();
 
         driver.findElement(By.xpath("//body")).click();
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test151");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test15");
         Thread.sleep(1000);
 
 

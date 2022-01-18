@@ -74,15 +74,14 @@ public class ADFWeb_ModBus {
         Thread.sleep(3000);
 
         System.out.println("Enter IPv4");
-        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test151");//переписать нормально
+        tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test183");
         Thread.sleep(1000);
-
 
         System.out.println("Click Сохранить");
         WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
         System.out.println(save.getTagName());
         save.click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         System.out.println("Check Сохранить все изменения");
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
