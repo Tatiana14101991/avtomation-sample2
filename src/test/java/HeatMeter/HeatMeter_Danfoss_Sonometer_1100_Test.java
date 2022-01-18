@@ -1,5 +1,6 @@
 package HeatMeter;
 
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
+public class HeatMeter_Danfoss_Sonometer_1100_Test {
     public ChromeDriver driver;
 
     @Before
@@ -23,20 +24,10 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
 
 
     @Test
-    public void Danfoss_SonoCollect_111_LocalStorage() throws InterruptedException {
+    public void HeatMeter_Danfoss_Sonometer_1100() throws InterruptedException {
 
 
-        System.out.println("Enter Email");
-        driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Enter password");
-        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Click Enter");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
-        Thread.sleep(1000);
+        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -81,7 +72,7 @@ public class Обзор_Теплосчетчик_Danfoss_Sonometer_1100 {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12345678993");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("1234678993");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

@@ -48,7 +48,7 @@ public class HotWaterMeterDanfoss_H_WMT_Test {
         Thread.sleep(1000);
 
         System.out.println("Click Добавить");
-        driver.findElement(By.xpath("//button[3][@title='Добавить']/span[1]")).click();
+        driver.findElement(By.xpath("//*[@title='Добавить']")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Тип устройства");
