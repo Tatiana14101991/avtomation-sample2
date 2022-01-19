@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public  class Auth {
+//    Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
 
     public static void login(RemoteWebDriver driver, String login, String pass) throws InterruptedException {
 

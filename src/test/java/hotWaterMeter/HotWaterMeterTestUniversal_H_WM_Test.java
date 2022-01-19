@@ -83,9 +83,9 @@ import static org.junit.Assert.assertEquals;
             Thread.sleep(1000);
 
             System.out.println("Enter Адаптер");
-            driver.findElement(By.xpath("/html/body/div[9]/form/div/div[2]/div[2]/div[3]/div/div/div/table/tbody/tr[2]/td[10]/div/div/svg")).click();
+            driver.findElement(By.xpath("//*[@class='MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-formControl MuiInput-formControl']")).click();
             Thread.sleep(3000);
-            driver.findElement(By.xpath("//*[contains(text(),'878')])]")).click();
+            driver.findElement(By.xpath("//tr[3]//td[10]//*[@class='MuiSelect-nativeInput']")).click();
             Thread.sleep(1000);
 
             System.out.println("Enter Номер канала");
