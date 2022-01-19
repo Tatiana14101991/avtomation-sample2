@@ -84,21 +84,7 @@ public class HotWaterMeterDefault_Hot_Water_Meter_Test extends MainMetods {
         driver.findElement(By.xpath("//div[3]/div/button[2]/span[1]")).click();
         Thread.sleep(2000);
 
-        System.out.println("Click Изменить");
-        driver.findElement(By.xpath("//button[2][@title='Изменить']")).click();
-        Thread.sleep(2000);
-
-        System.out.println("Click Удалить");
-        driver.findElement(By.xpath("//button[@title='Удалить']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath("//*[text()='check']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
+        deleteElement(driver);
 
     }
 

@@ -62,7 +62,7 @@ public class Danfoss_INDIV_X_MESH extends MainMetods {
 
         System.out.println("Click Дата установки");
         Thread.sleep(3000);
-        driver.findElement(By.xpath(div[locale="[object Object]");
+        driver.findElement(By.xpath("//div[locale='object Object'];
         driver.findElement(By.xpath("//input[@value='20.01.2022']")).click();
         Thread.sleep(1000);
 
