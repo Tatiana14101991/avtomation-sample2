@@ -1,6 +1,8 @@
 package ADFWeb;
 
+import com.sun.tools.javac.Main;
 import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,8 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class ADFWeb_FtpPassive {
+public class ADFWeb_FtpPassive extends MainMetods {
     public ChromeDriver driver;
+//    MainMetods mainMetods=new MainMetods();
 
     @Before
     public void beforeTest() {
@@ -86,21 +89,7 @@ public class ADFWeb_FtpPassive {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[7]//*[@title='Изменить']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[@title='Сохранить все изменения']")).click();
-        Thread.sleep(3000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
-        Thread.sleep(3000);
+      deleteElement(driver);
     }
 
 

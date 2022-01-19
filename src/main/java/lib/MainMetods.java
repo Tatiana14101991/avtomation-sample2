@@ -3,9 +3,9 @@ package lib;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class Removal {
+public class MainMetods {
 //removal(driver, "
-    public static void login(RemoteWebDriver driver, String change, String delete) throws InterruptedException {
+    public void deleteElement(RemoteWebDriver driver) throws InterruptedException {
 
         System.out.println("Check Изменить");
         driver.findElement(By.xpath("//td[7]//*[@title='Изменить']")).click();
@@ -22,6 +22,20 @@ public class Removal {
         System.out.println("Check Сохранить все изменения");
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
-    }
 
+    }
+    public void login(RemoteWebDriver driver, String login, String pass) throws InterruptedException {
+
+        System.out.println("Enter Email");
+        driver.findElement(By.id("Email")).sendKeys(login);
+        Thread.sleep(1000);
+
+        System.out.println("Enter password");
+        driver.findElement(By.id("password")).sendKeys(pass);
+        Thread.sleep(1000);
+
+        System.out.println("Click Enter");
+        driver.findElement(By.xpath("//*[text()='Enter']")).click();
+        Thread.sleep(1000);
+    }
 }
