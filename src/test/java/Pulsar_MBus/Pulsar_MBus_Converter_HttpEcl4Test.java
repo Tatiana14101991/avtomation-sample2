@@ -1,5 +1,6 @@
 package Pulsar_MBus;
 
+import lib.Auth;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,17 +26,7 @@ public class Pulsar_MBus_Converter_HttpEcl4Test {
     @Test
     public void SonoCollect_110FtpPassive() throws InterruptedException {
 
-
-        System.out.println("Enter Email");
-        driver.findElement(By.id("Email")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Enter password");
-        driver.findElement(By.id("password")).sendKeys("Admin@Admin.com");
-        Thread.sleep(1000);
-
-        System.out.println("Click Enter");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div[1]/button/span[1]")).click();
+        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");
@@ -46,7 +37,7 @@ public class Pulsar_MBus_Converter_HttpEcl4Test {
         Thread.sleep(1000);
 
         System.out.println("Check menu");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div/header[2]/div/button")).click();
+        driver.findElement(By.xpath("//*[@aria-label='menu']")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Настройки");

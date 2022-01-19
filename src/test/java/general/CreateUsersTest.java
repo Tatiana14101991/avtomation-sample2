@@ -38,7 +38,7 @@ public class CreateUsersTest {
         Thread.sleep(1000);
 
         System.out.println("Check menu");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div/header[2]/div/button")).click();
+        driver.findElement(By.xpath("//*[@aria-label='menu']")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Настройки");
