@@ -1,6 +1,6 @@
 package ADFWeb;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class ADFWeb_ModBus {
+public class ADFWeb_ModBus extends MainMetods {
 
     public ChromeDriver driver;
 
@@ -27,7 +27,7 @@ public class ADFWeb_ModBus {
     public void ADFWeb_ModBus() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");

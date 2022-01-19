@@ -1,6 +1,6 @@
 package HeatMeter;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class HeatMeter_Danfoss_SonoSafe_10_Tesst {
+public class HeatMeter_Danfoss_SonoSafe_10_Test extends MainMetods {
 
     public ChromeDriver driver;
 
@@ -28,7 +28,7 @@ public class HeatMeter_Danfoss_SonoSafe_10_Tesst {
     public void Danfoss_SonoSafe_10() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());

@@ -1,6 +1,6 @@
 package Danfoss_INDIV_X_TOTAL_X_MESH;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_INDIV_X_MESH {
+public class Danfoss_INDIV_X_MESH extends MainMetods {
     public ChromeDriver driver;
 
     @Before
@@ -26,7 +26,7 @@ public class Danfoss_INDIV_X_MESH {
     public void Danfoss_INDIV_X_MESH() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -62,7 +62,8 @@ public class Danfoss_INDIV_X_MESH {
 
         System.out.println("Click Дата установки");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("01.12.2021");
+        driver.findElement(By.xpath(div[locale="[object Object]");
+        driver.findElement(By.xpath("//input[@value='20.01.2022']")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

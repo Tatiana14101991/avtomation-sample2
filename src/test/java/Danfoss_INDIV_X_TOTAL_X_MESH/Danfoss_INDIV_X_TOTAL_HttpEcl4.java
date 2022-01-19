@@ -1,6 +1,6 @@
 package Danfoss_INDIV_X_TOTAL_X_MESH;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_INDIV_X_TOTAL_HttpEcl4 {
+public class Danfoss_INDIV_X_TOTAL_HttpEcl4 extends MainMetods {
     public ChromeDriver driver;
 
     @Before
@@ -26,7 +26,7 @@ public class Danfoss_INDIV_X_TOTAL_HttpEcl4 {
     public void Danfoss_INDIV_X_TOTAL_HttpEcl4() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());

@@ -1,6 +1,6 @@
 package Danfoss_SonoCollect110;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect_110_HttpEcl4 {
+public class Danfoss_SonoCollect_110_HttpEcl4 extends MainMetods {
 
     public ChromeDriver driver;
 
@@ -26,7 +26,7 @@ public class Danfoss_SonoCollect_110_HttpEcl4 {
     public void SonoCollect_110_HttpEcl14() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());

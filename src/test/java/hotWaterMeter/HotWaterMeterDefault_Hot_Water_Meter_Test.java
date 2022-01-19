@@ -1,6 +1,6 @@
 package hotWaterMeter;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class HotWaterMeterDefault_Hot_Water_Meter_Test {
+public class HotWaterMeterDefault_Hot_Water_Meter_Test extends MainMetods {
 
     public ChromeDriver driver;
 
@@ -25,10 +25,10 @@ public class HotWaterMeterDefault_Hot_Water_Meter_Test {
 
 
     @Test
-    public void Default_Hot_Water_Meter() throws InterruptedException {
+    public void defaultHotWaterMeterTest() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());

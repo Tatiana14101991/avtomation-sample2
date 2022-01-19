@@ -1,6 +1,6 @@
 package general;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 
 
-public class ManagerTest {
+public class ManagerTest extends MainMetods {
     public ChromeDriver driver;
 
 
@@ -30,7 +30,7 @@ public class ManagerTest {
     public void testLogin() throws InterruptedException {
 
         
-        Auth.login(driver,"Admin3@Admin.com","Admin@Admin.com");
+        login(driver,"Admin3@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());

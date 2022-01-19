@@ -1,6 +1,6 @@
 package general;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 
 
-public class OperatorTest {
+public class OperatorTest extends MainMetods {
     public ChromeDriver driver;
 
 
@@ -30,7 +30,7 @@ public class OperatorTest {
     public void testLogin() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin4@Admin.com","Admin@Admin.com");
+        login(driver,"Admin4@Admin.com","Admin@Admin.com");
 
 
         System.out.println("Check url");

@@ -1,7 +1,5 @@
 package ADFWeb;
 
-import com.sun.tools.javac.Main;
-import lib.Auth;
 import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
@@ -12,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class ADFWeb_FtpPassive extends MainMetods {
+public class ADFWeb_FtpPassiveTest extends MainMetods {
     public ChromeDriver driver;
 //    MainMetods mainMetods=new MainMetods();
 
@@ -29,7 +27,7 @@ public class ADFWeb_FtpPassive extends MainMetods {
     public void ADFWeb_FtpPassive() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");

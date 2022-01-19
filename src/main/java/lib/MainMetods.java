@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class MainMetods {
-//removal(driver, "
-    public void deleteElement(RemoteWebDriver driver) throws InterruptedException {
+
+    protected void deleteElement(RemoteWebDriver driver) throws InterruptedException {
 
         System.out.println("Check Изменить");
         driver.findElement(By.xpath("//td[7]//*[@title='Изменить']")).click();
@@ -24,7 +24,7 @@ public class MainMetods {
         Thread.sleep(3000);
 
     }
-    public void login(RemoteWebDriver driver, String login, String pass) throws InterruptedException {
+    protected void login(RemoteWebDriver driver, String login, String pass) throws InterruptedException {
 
         System.out.println("Enter Email");
         driver.findElement(By.id("Email")).sendKeys(login);

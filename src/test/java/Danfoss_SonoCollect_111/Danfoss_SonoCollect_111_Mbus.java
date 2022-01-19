@@ -1,6 +1,6 @@
 package Danfoss_SonoCollect_111;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect_111_Mbus {
+public class Danfoss_SonoCollect_111_Mbus extends MainMetods {
     public ChromeDriver driver;
 
     @Before
@@ -25,7 +25,7 @@ public class Danfoss_SonoCollect_111_Mbus {
     public void Danfoss_SonoCollect_111_Mbus() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");

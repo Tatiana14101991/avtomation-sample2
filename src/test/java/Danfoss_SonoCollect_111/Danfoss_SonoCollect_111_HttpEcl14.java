@@ -1,6 +1,6 @@
 package Danfoss_SonoCollect_111;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_SonoCollect_111_HttpEcl14 {
+public class Danfoss_SonoCollect_111_HttpEcl14 extends MainMetods {
     public ChromeDriver driver;
     private WebElement tr;
 
@@ -26,7 +26,7 @@ public class Danfoss_SonoCollect_111_HttpEcl14 {
     public void Danfoss_SonoCollect_111_HttpEcl14() throws InterruptedException {
 
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");

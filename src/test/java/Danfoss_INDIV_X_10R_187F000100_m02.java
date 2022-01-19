@@ -1,4 +1,4 @@
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
-public class Danfoss_INDIV_X_10R_187F000100_m02 {
+public class Danfoss_INDIV_X_10R_187F000100_m02 extends MainMetods {
     public ChromeDriver driver;
 
     @Before
@@ -24,7 +24,7 @@ public class Danfoss_INDIV_X_10R_187F000100_m02 {
     @Test
     public void Danfoss_INDIV_X_10R_187F000100_m02() throws InterruptedException {
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());

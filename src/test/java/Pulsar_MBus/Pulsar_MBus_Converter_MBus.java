@@ -1,6 +1,6 @@
 package Pulsar_MBus;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class Pulsar_MBus_Converter_MBus {
+public class Pulsar_MBus_Converter_MBus extends MainMetods {
 
     public ChromeDriver driver;
 
@@ -26,7 +26,7 @@ public class Pulsar_MBus_Converter_MBus {
     @Test
     public void SonoCollect_110FtpPassive() throws InterruptedException {
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");

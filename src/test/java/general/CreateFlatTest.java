@@ -1,6 +1,6 @@
 package general;
 
-import lib.Auth;
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
-public class CreateFlatTest {
+public class CreateFlatTest extends MainMetods {
     public ChromeDriver driver;
 
     @Before
@@ -23,7 +23,7 @@ public class CreateFlatTest {
     @Test
     public void Создание_квартиры() throws InterruptedException {
 
-        Auth.login(driver,"Admin@Admin.com","Admin@Admin.com");
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
 
         Thread.sleep(2000);
         System.out.println("Check url");
