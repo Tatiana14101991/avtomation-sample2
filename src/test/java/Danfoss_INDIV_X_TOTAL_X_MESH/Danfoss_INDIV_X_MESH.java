@@ -44,7 +44,7 @@ public class Danfoss_INDIV_X_MESH extends MainMetods {
         Thread.sleep(1000);
 
         System.out.println("Click Добавить");
-        driver.findElement(By.xpath("//span[text()=\"add_box\"]")).click();
+        driver.findElement(By.xpath("//*[@title='Добавить']")).click();
         Thread.sleep(3000);
 
         System.out.println("Click Тип устройства");
@@ -62,8 +62,8 @@ public class Danfoss_INDIV_X_MESH extends MainMetods {
 
         System.out.println("Click Дата установки");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[locale='object Object'];
-        driver.findElement(By.xpath("//input[@value='20.01.2022']")).click();
+        driver.findElement(By.xpath("//div[@format='MMMM do']")).click();
+        driver.findElement(By.xpath("//*[@value='20.01.2022']")).click();
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
