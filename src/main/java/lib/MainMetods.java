@@ -8,18 +8,18 @@ public class MainMetods {
     protected void deleteElement(RemoteWebDriver driver) throws InterruptedException {
 
         System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[7]//*[@title='Изменить']")).click();
+        driver.findElement(By.xpath("//button[@title='Изменить']")).click();
         Thread.sleep(1000);
 
         System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
+        driver.findElement(By.xpath("//button[@title='Удалить']")).click();
         Thread.sleep(1000);
 
-        System.out.println("Check Сохранить");
+        System.out.println("Check Сохранить все изменения");
         driver.findElement(By.xpath("//*[@title='Сохранить все изменения']")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Сохранить все изменения");
+        System.out.println("Check Сохранить");
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 

@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
 public class Danfoss_INDIV_X_TOTAL_ModBus extends MainMetods {
-
     public ChromeDriver driver;
 
     @Before
@@ -23,7 +22,7 @@ public class Danfoss_INDIV_X_TOTAL_ModBus extends MainMetods {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Danfoss_INDIV_X_TOTAL_ModBus() throws InterruptedException {
 
         login(driver,"Admin@Admin.com","Admin@Admin.com");
 
@@ -92,21 +91,7 @@ public class Danfoss_INDIV_X_TOTAL_ModBus extends MainMetods {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test811']/..//span[text()='edit']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath("//*[text()='check']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
+        deleteElement(driver);
 
     }
 

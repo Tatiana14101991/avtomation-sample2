@@ -69,7 +69,7 @@ public class Danfoss_INDIV_X_10R_187F000100_m02 extends MainMetods {
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("235892");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");

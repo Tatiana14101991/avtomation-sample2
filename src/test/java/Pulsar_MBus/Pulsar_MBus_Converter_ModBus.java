@@ -1,5 +1,6 @@
 package Pulsar_MBus;
 
+import lib.MainMetods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
-public class Pulsar_MBus_Converter_ModBus {
+public class Pulsar_MBus_Converter_ModBus extends MainMetods {
 
     public ChromeDriver driver;
 
@@ -23,9 +24,9 @@ public class Pulsar_MBus_Converter_ModBus {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Pulsar_MBus_Converter_ModBus() throws InterruptedException {
 
-
+        login(driver,"Admin@Admin.com","Admin@Admin.com");
         Thread.sleep(2000);
         System.out.println("Check url");
         assertEquals("http://localhost:8080/groups", driver.getCurrentUrl());
@@ -61,7 +62,7 @@ public class Pulsar_MBus_Converter_ModBus {
         Thread.sleep(1000);
 
 
-        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
+        WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));
         System.out.println(tr.getTagName());
 
         System.out.println("Click Типы загрузки");
@@ -75,8 +76,6 @@ public class Pulsar_MBus_Converter_ModBus {
         tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test29");
         Thread.sleep(1000);
 
-
-
         System.out.println("Click Сохранить");
         WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
         System.out.println(save.getTagName());
@@ -87,22 +86,7 @@ public class Pulsar_MBus_Converter_ModBus {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test29']/..//span[text()='edit']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath("//*[text()='check']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
-
+        deleteElement(driver);
 
     }
 

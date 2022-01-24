@@ -36,7 +36,7 @@ public class Danfoss_INDIV_X_10M extends MainMetods {
 
         System.out.println("Click Бориса Пастернака,25");
         Actions actions = new Actions(driver);
-        WebElement elementLocator = driver.findElement(By.xpath("//*[contains(text(), 'Бориса Пастернака,25')]"));
+        WebElement elementLocator = driver.findElement(By.xpath("//*[contains(text(), 'Бориса Пастернака, 25')]"));
         actions.doubleClick(elementLocator).perform();
         Thread.sleep(1000);
 
@@ -72,6 +72,10 @@ public class Danfoss_INDIV_X_10M extends MainMetods {
         System.out.println("Enter Серийный номер");
         driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("123");
         Thread.sleep(1000);
+
+        System.out.println("Click Радиаторные коэффициенты");
+        driver.findElement(By.xpath("//td[value='Панельный 11 Vogel&Noot Compact 11k H=300 W=400']")).click();
+        Thread.sleep(3000);
 
         System.out.println("Click Сохранить");
         driver.findElement(By.xpath("//button[1][@title='Сохранить']")).click();

@@ -24,7 +24,7 @@ public class Pulsar_MBus_Converter_MBus extends MainMetods {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Pulsar_MBus_Converter_MBus() throws InterruptedException {
 
         login(driver,"Admin@Admin.com","Admin@Admin.com");
 
@@ -87,21 +87,7 @@ public class Pulsar_MBus_Converter_MBus extends MainMetods {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test29']/..//span[text()='edit']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath("//*[text()='check']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
+        deleteElement(driver);
 
     }
 

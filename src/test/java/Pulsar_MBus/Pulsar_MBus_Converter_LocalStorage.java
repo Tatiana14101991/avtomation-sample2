@@ -24,7 +24,7 @@ public class Pulsar_MBus_Converter_LocalStorage extends MainMetods {
 
 
     @Test
-    public void SonoCollect_110FtpPassive() throws InterruptedException {
+    public void Pulsar_MBus_Converter_LocalStorage() throws InterruptedException {
 
 
         login(driver,"Admin@Admin.com","Admin@Admin.com");
@@ -63,7 +63,6 @@ public class Pulsar_MBus_Converter_LocalStorage extends MainMetods {
         driver.findElement(By.xpath("//button[@title='Добавить']")).click();
         Thread.sleep(1000);
 
-
         WebElement tr = driver.findElement(By.xpath("//span[@title='Сохранить']/../../.."));//переписать нормально
         System.out.println(tr.getTagName());
 
@@ -78,8 +77,6 @@ public class Pulsar_MBus_Converter_LocalStorage extends MainMetods {
         tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test24");//переписать нормально
         Thread.sleep(1000);
 
-
-
         System.out.println("Click Сохранить");
         WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
         System.out.println(save.getTagName());
@@ -90,21 +87,7 @@ public class Pulsar_MBus_Converter_LocalStorage extends MainMetods {
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[@value='test24']/..//span[text()='edit']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath("//*[text()='check']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
-        Thread.sleep(1000);
+        deleteElement(driver);
 
     }
 

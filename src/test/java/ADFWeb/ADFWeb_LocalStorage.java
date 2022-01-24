@@ -78,31 +78,11 @@ public class ADFWeb_LocalStorage extends MainMetods {
         tr.findElement(By.xpath("td[3]/div/div/input")).sendKeys("test182");
         Thread.sleep(1000);
 
-        System.out.println("Click Сохранить");
-        WebElement save = tr.findElement(By.xpath("//button[@title='Сохранить']"));
-        System.out.println(save.getTagName());
-        save.click();
-        Thread.sleep(1000);
-
         System.out.println("Check Сохранить все изменения");
         driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
         Thread.sleep(3000);
 
-        System.out.println("Check Изменить");
-        driver.findElement(By.xpath("//td[7]//*[@title='Изменить']")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Удалить");
-        driver.findElement(By.xpath("//button[@title=\"Удалить\"]")).click();
-        Thread.sleep(1000);
-
-        System.out.println("Check Сохранить");
-        driver.findElement(By.xpath("//*[@title='Сохранить все изменения']")).click();
-        Thread.sleep(3000);
-
-        System.out.println("Check Сохранить все изменения");
-        driver.findElement(By.xpath(".//span[contains(text(), 'Сохранить')]")).click();
-        Thread.sleep(3000);
+        deleteElement(driver);
     }
 
 

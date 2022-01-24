@@ -38,7 +38,7 @@ public class ColdWaterMeter_Danfoss_Default_Heater_Meter_Test extends MainMetods
 
         System.out.println("Click Бориса Пастернака,25");
         Actions actions = new Actions(driver);
-        WebElement elementLocator = driver.findElement(By.xpath("//*[contains(text(), 'Бориса Пастернака,25')]"));
+        WebElement elementLocator = driver.findElement(By.xpath("//td[contains(text(), 'Бориса Пастернака,25')]"));
         actions.doubleClick(elementLocator).perform();
         Thread.sleep(1000);
 
@@ -72,7 +72,7 @@ public class ColdWaterMeter_Danfoss_Default_Heater_Meter_Test extends MainMetods
         Thread.sleep(1000);
 
         System.out.println("Enter Серийный номер");
-        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("12356892");
+        driver.findElement(By.xpath("//tr[2]/td[1]/div/div/input")).sendKeys("35892");
         Thread.sleep(1000);
 
         System.out.println("Click Сохранить");
