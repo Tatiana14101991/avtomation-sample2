@@ -96,7 +96,6 @@ public class Danfoss_INDIV_X_MESH extends MainMetods {
         driver.findElement(By.xpath("//*[text()='Сохранить']")).click();
         Thread.sleep(1000);
 
-
     }
     @After
         public void afterTest() {
