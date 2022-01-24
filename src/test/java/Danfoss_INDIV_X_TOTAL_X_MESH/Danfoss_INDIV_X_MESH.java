@@ -7,6 +7,10 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
 
@@ -62,9 +66,10 @@ public class Danfoss_INDIV_X_MESH extends MainMetods {
 
         System.out.println("Click Дата установки");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[@format='MMMM do']")).click();
-        driver.findElement(By.xpath("//*[@value='20.01.2022']")).click();
-        Thread.sleep(1000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement ele = driver.findElement(By.xpath("(//*[@aria-label='Дата установки: press space to edit']"));
+        wait.until(ExpectedConditions.elementToBeClickable(ele));
+        ele.click();
 
         System.out.println("Click Сохранить");
         WebElement save = driver.findElement(By.xpath("//button[@title='Сохранить']"));
